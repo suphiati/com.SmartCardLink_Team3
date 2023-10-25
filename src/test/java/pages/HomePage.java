@@ -11,7 +11,11 @@ public class HomePage {
 
 
     }
-    //HomePage Features link
-    @FindBy(xpath ="(//a[@class='nav-link mt-1'])[1]")
-    public WebElement featuresLink;
+    // Header/Features Link
+    @FindBy(xpath="//a[text()='Features']")
+    public WebElement FeaturesTextLink;
+
+    //Homepage SignIn Button
+    @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
+    public WebElement signInButton;
 }
