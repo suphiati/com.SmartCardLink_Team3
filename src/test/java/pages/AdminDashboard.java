@@ -28,4 +28,8 @@ public class AdminDashboard {
 
     @FindBy(xpath = "//*[@class='swal-button swal-button--confirm']")
     public WebElement usersSayfasiDeleteOnayButonu;
+
+    //AdminDashboard delete oldu bildirim yazisi
+    @FindBy(xpath = "//*[@class='swal-button swal-button--confirm']")
+    public WebElement usersSayfasiDeleteOnayYazisi;
 }
