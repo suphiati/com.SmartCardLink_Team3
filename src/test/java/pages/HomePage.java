@@ -30,4 +30,38 @@ public class HomePage {
     //SignIn loginButonu
     @FindBy(xpath = "//*[@class='btn btn-primary']")
     public WebElement loginButonu;
+
+    @FindBy(xpath = "")
+    public WebElement siteLogoX; // Ramazan hocam bu locate çakışma yapacak. Bunu silebilirsiniz.
+
+    @FindBy(xpath = "//span[text()='Smart Card Link']") //hasan
+    public WebElement footerSmartCardLinkText;
+
+    @FindBy(xpath = "//a[@title='Facebook']") //hasan
+    public WebElement footerFacebookLink;
+
+    @FindBy(xpath = "//a[@title='Twitter']") //hasan
+    public WebElement footerTwitterLink;
+
+    @FindBy(xpath = "//a[@title='Instagram']") //hasan
+    public WebElement footerInstagramLink;
+
+    @FindBy(xpath = "//a[@title='Linkedin']") //hasan
+    public WebElement footerLinkedinLink;
+
+    @FindBy(xpath = "//a[@title='Pinterest']") //hasan
+    public WebElement footerPinterestLink;
+
+    @FindBy(xpath = "//a[text()='Terms & Conditions']") //hasan
+    public WebElement footerTermsConditionsLink;
+
+    @FindBy(xpath = "//a[text()='Privacy Policy']") //hasan
+    public WebElement footerPrivacyPolicyLink;
+
+    @FindBy(xpath = "//a[text()='FAQ']") //hasan
+    public WebElement footFAQLink;
+
+
+
+
 }
