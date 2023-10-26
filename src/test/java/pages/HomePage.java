@@ -18,4 +18,16 @@ public class HomePage {
     //Homepage SignIn Button
     @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
     public WebElement signInButton;
+
+    //SignIn emailKutusu
+    @FindBy(id = "email")
+    public WebElement emailKutusu;
+
+    //SignIn passwordKutusu
+    @FindBy(id = "password")
+    public WebElement passwordKutusu;
+
+    //SignIn loginButonu
+    @FindBy(xpath = "//*[@class='btn btn-primary']")
+    public WebElement loginButonu;
 }
