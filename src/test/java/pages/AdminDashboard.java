@@ -10,6 +10,7 @@ public class AdminDashboard {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    //**Eren Gok**
     //AdminDashboard usersButonu
     @FindBy(xpath = "(//span[@class='aside-menu-title'])[3]")
     public WebElement usersSayfasi;
@@ -90,6 +91,8 @@ public class AdminDashboard {
     //AdminDashboard FrontCMS sekmesi ==> Enquiries butonu
     @FindBy(xpath = "(//a[@class='nav-link p-0 '])[22]")
     public WebElement frontCmsSayfasiEnquiriesButton;
+
+    //**Eren Gok**
 
 
 
