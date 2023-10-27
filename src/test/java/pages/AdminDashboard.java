@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AdminDashboard {
     public AdminDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -222,5 +224,72 @@ public class AdminDashboard {
     public WebElement signOut;
 
     //***** SUPHİ *****//
+
+    //* MURAT *//
+
+    @FindBy(xpath = "//div[@class='table-responsive']")
+    public WebElement kullaniciTablosu;
+
+    @FindBy(xpath = "//td//div//a[@title='Edit']")
+    public List<WebElement> kullaniciTablosuEditButonlari;
+
+    @FindBy(xpath = "(//a[@title='Change Password'])")
+    public List<WebElement> sifreDegisButonlari;
+
+    @FindBy(xpath = "//td//div//a[@title='Delete']")
+    public List <WebElement> deleteButonlari;
+
+    @FindBy(xpath = "//input[@name='is_active']")
+    public List <WebElement> userActivityToggles;
+
+    @FindBy(xpath = "//button[normalize-space()='Edit']")
+    public WebElement editButonu;
+
+    @FindBy(xpath = "//input[@id='userFirstName']")
+    public WebElement firstNameInput;
+
+    @FindBy(xpath = "//input[@id='userLastName']")
+    public WebElement lastNameInput;
+
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement emailInput;
+
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement passwordInput;
+
+    @FindBy(xpath = "//input[@id='cPassword']")
+    public WebElement confirmPasswordInput;
+
+    @FindBy(xpath = "//input[@value='Save']")
+    public WebElement saveButonu;
+
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement successfulMessage;
+
+    @FindBy(xpath = "//div[@class='swal-text']")
+    public WebElement deleteOnayMesaji;
+
+    @FindBy(xpath = "(//input[@id='new_password'])[2]")
+    public WebElement yeniSifreInput;
+
+    @FindBy(xpath = "(//input[@id='confirm_password'])[2]")
+    public WebElement yeniSifreOnayInput;
+
+    @FindBy(xpath = "//button[@id='UserPasswordChangeBtn']")
+    public WebElement yeniSifreOnayButonu;
+
+    @FindBy(xpath = "//div[@class='toast-title']")
+    public WebElement yeniSifreOnayMesaji;
+
+    @FindBy(xpath = "//a[normalize-space()='Add User']")
+    public WebElement addUserButonu;
+
+    @FindBy(xpath = "//button[normalize-space()='Yes, Delete!']")
+    public WebElement deleteOnayButonu;
+
+    @FindBy(xpath = "//div[contains(@class, 'bg-primary')]/div[@class='text-end text-white']/h2")
+    public WebElement activeUsersCountElement;
+
+    //* MURAT *//
 
 }
