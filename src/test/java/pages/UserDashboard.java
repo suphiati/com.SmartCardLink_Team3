@@ -7,10 +7,7 @@ import utilities.Driver;
 
 public class UserDashboard {
 
-    public UserDashboard(){
 
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
 
     // Dashboard yazisi elemnti
     @FindBy(xpath = "//a[@class='nav-link p-0 active']")
