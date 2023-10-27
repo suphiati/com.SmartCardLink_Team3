@@ -4,15 +4,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
 import pages.HomePage;
+import pages.InPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US_17_34_35_Eren extends TestBaseRapor {
+public class US_17_34_35_Eren extends InPage {
 
-    HomePage homePage=new HomePage();
-    AdminDashboard adminDashboard= new AdminDashboard();
+    //HomePage homePage=new HomePage();
+    //AdminDashboard adminDashboard= new AdminDashboard();
     @Test
     public void us_034_subscriberDeleteTest() {
         extentTest=extentReports.createTest("us_034_subscriberDeleteTesti","kullanici admin olarak giris yapar.Subscriber'lari siler ve sildigini dogrular");
