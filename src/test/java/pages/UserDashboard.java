@@ -10,6 +10,8 @@ public class UserDashboard {
     public UserDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+    //***** SUPHİ *****//
     @FindBy(linkText = "Sign In")
     public WebElement signIn;
 
@@ -160,6 +162,15 @@ public class UserDashboard {
     //Ayarlarda yapılan güncellemeler basarili yazisi
     @FindBy(xpath = "//*[@*='alert']")
     public WebElement guncellemeDogrulama;
+
+    //Log out
+    @FindBy(xpath = "//button[@id='dropdownMenuButton1']")
+    public WebElement kullaniCikisBolumu;
+
+    @FindBy(xpath = "//a[@class='dropdown-item text-gray-900 d-flex']")
+    public WebElement signOut;
+
+    //***** SUPHİ *****//
 
 }
 

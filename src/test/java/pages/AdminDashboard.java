@@ -33,7 +33,9 @@ public class AdminDashboard {
     @FindBy(xpath = "//*[@class='swal-button swal-button--confirm']")
     public WebElement usersSayfasiDeleteOnayYazisi;
 
-    @FindBy(linkText = "Sign In")
+
+    //***** SUPHİ *****//
+    @FindBy(xpath = "//a[@class='btn btn-white fs-18 ms-3 d-lg-block d-none']")
     public WebElement signIn;
 
     @FindBy(xpath = "//input[@name='email']")
@@ -47,27 +49,44 @@ public class AdminDashboard {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButonu;
 
+//********************************//
 
-    //********************************//
-
-    //Withdraw Transaction giris
+    // -- Withdraw Transaction giris
     @FindBy(xpath = "(//span[@class='aside-menu-title'])[11]")
     public WebElement withdrawTransactions;
-
-    //Kullanici
+    //Kullanici basligi
     @FindBy(xpath = "(//div[@class='d-flex align-items-center']//span['User'])[1]")
     public WebElement userBasligi;
 
+    //kullanici bilgisi
+    @FindBy(xpath = "(//div[@class='d-flex align-items-center']//span['User'])[7]")
+    public WebElement odemeYapilacakKisiAdi;
+
 
     //Ödeme Tutari
+    @FindBy(xpath = "//thead/tr/th[2]")
+    public WebElement amountBasligi;
+
+    @FindBy(xpath = "(//span[@class='badge bg-success me-2'])[5]")
+    public WebElement odemeTutari;
 
     //Ödeme Tipi
+    @FindBy(xpath = "//thead/tr/th[3]")
+    public WebElement paymentTypeBasligi;
+
+    @FindBy(xpath = "(//span[@class='badge bg-primary me-2'])[5]")
+    public WebElement odemeTipi;
 
     //Ödeme Tarihi
+    @FindBy (xpath = "//thead/tr/th[4]")
+    public WebElement dateBasligi;
+    @FindBy(xpath = "(//span[@class='badge bg-secondary me-2'])[5]")
+    public WebElement odemeTarihi;
+
 
 //********************************//
 
-    //Currencies
+    // -- Currencies
     @FindBy(xpath = "(//span[@class='aside-menu-title'])[12]")
     public WebElement currencies;
 
@@ -82,7 +101,7 @@ public class AdminDashboard {
 
 //********************************//
 
-    //Cupon Codes
+    // -- Cupon Codes
     @FindBy(xpath = "(//span[@class='aside-menu-title'])[15]")
     public WebElement cuponCode;
 
@@ -131,4 +150,14 @@ public class AdminDashboard {
 
     @FindBy(xpath = "//button[@id='couponCodeSaveBtn']")
     public WebElement saveCouponCode;
+
+
+    //Log out
+    @FindBy(xpath = "//button[@id='dropdownMenuButton1']")
+    public WebElement kullaniCikisBolumu;
+
+    @FindBy(xpath = "//a[@class='dropdown-item text-gray-900 d-flex']")
+    public WebElement signOut;
+
+    //***** SUPHİ *****//
 }
