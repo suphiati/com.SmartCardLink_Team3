@@ -205,6 +205,7 @@ public class UserDashboard {
 
     //***** SUPHİ *****//
 
+    //*******Ramazan*********
     @FindBy(xpath = "//*[@*='changePassword']")
     public WebElement changePasswordButonu;
 
@@ -220,6 +221,24 @@ public class UserDashboard {
     @FindBy(xpath = "//*[@*='passwordChangeBtn']")
     public WebElement changePasswordSaveButonu;
 
+    @FindBy(xpath = "//*[@*='toast-message']")
+    public WebElement passwordSuccesfullyChangedYaziElementi;
+
+    @FindBy(xpath = "//*[@*='changeLanguage']")
+    public WebElement changeLanguageButonu;
+
+    @FindBy(xpath = "//*[@id='select2-selectLanguage-container']")
+    public WebElement languageSwitchButton;
+
+    @FindBy(xpath = "(//*[@*='select2-selectLanguage-results'])[2]")
+    public WebElement dilSeçmeMetinKutusu;
+
+    @FindBy(xpath = "//*[@*='languageChangeBtn']")
+    public WebElement changeLanguageSaveButonu;
+
+    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[1]/header/ul/li[2]/div/div[2]/ul/li[5]/a/span[2]")
+    public WebElement signOutButonu;
+    //*******Ramazan*********
 
 }
 
