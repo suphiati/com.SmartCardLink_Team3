@@ -205,6 +205,21 @@ public class UserDashboard {
 
     //***** SUPHİ *****//
 
+    @FindBy(xpath = "//*[@*='changePassword']")
+    public WebElement changePasswordButonu;
+
+    @FindBy(xpath = "//*[@*='Current Password']")
+    public WebElement currentPasswordKutusu;
+
+    @FindBy(xpath = "//*[@*='New Password']")
+    public WebElement newPasswordKutusu;
+
+    @FindBy(xpath = "//*[@*='Confirm Password']")
+    public WebElement confirmPasswordKutusu;
+
+    @FindBy(xpath = "//*[@*='passwordChangeBtn']")
+    public WebElement changePasswordSaveButonu;
+
 
 }
 

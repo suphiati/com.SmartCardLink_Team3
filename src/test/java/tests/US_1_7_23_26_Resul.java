@@ -3,10 +3,11 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import pages.InPage;
 import pages.UserDashboard;
 import utilities.Driver;
 
-public class US_1_7_23_26_Resul {
+public class US_1_7_23_26_Resul extends InPage {
 
 
     @Test
@@ -25,8 +26,8 @@ public class US_1_7_23_26_Resul {
 @Test
     public void US07dashboardPageTesti(){
 
-        HomePage homePage=new HomePage();
-        UserDashboard userDashboard=new UserDashboard();
+        //HomePage homePage=new HomePage();
+        //UserDashboard userDashboard=new UserDashboard();
 
         //Kullanici hesap bilgileri ile siteye basarili bir sekilde giris yapmali
     Driver.getDriver().get("https://qa.smartcardlink.com");
