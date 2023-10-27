@@ -9,8 +9,8 @@ public class HomePage {
     public HomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
 
-
     }
+
     // Header/Features Link
     @FindBy(xpath="//a[text()='Features']")
     public WebElement FeaturesTextLink;
