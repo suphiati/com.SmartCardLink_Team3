@@ -53,8 +53,12 @@ public class AdminDashboard {
     public WebElement gorusIcerikGoruntulemeElementi;
 
     //AdminDashboard FrontCMS sekmesi ==> Testimonials butonu==> gorus icerik goruntuleme elementi ==> gorus icerik goruntulenebildigi kontrol elementi
-    @FindBy(xpath = "//*[text()='New Testimonial']")
+    @FindBy(xpath = "//*[@id='showDesc']")
     public WebElement gorusIcerikGoruntulemeKontrolElementi;
+
+    //AdminDashboard FrontCMS sekmesi ==> Testimonials butonu==> gorus icerik goruntuleme elementi ==> gorus icerik goruntuleme elementi kapatma tusu
+    @FindBy(xpath = "(//*[@class='btn-close'])[3]")
+    public WebElement gorusIcerikGoruntulemeKapatma;
 
     //AdminDashboard FrontCMS sekmesi ==> Testimonials butonu==>gorus duzenleme butonu
     @FindBy(xpath = "(//*[@class='btn px-1 text-primary fs-3 front-testimonial-edit-btn'])[1]")
@@ -69,7 +73,7 @@ public class AdminDashboard {
     public WebElement gorusDuzenlemeElementiSaveKutusu;
 
     //AdminDashboard FrontCMS sekmesi ==> Testimonials butonu==>gorus duzenleme butonu==>Save kutusu==>Success yazisi
-    @FindBy(xpath = "//div[@class'=toast toast-success']")
+    @FindBy(xpath = "//div[text()='Success']")
     public WebElement gorusDuzenlemeSuccessYazisi;
 
 
@@ -90,9 +94,29 @@ public class AdminDashboard {
     @FindBy(xpath = "(//*[@id='profileImageIcon'])[1]")
     public WebElement addTestimonialAddImage;
 
+    //AdminDashboard FrontCMS sekmesi ==> Testimonials bolumu Add Testimonials sonrasi ==>Succes yazisi
+    @FindBy(xpath = "//div[text()='Success']")
+    public WebElement addTestimonialSuccessElementi;
+
+    //AdminDashboard FrontCMS sekmesi ==> Testimonials bolumu Testimonials delete simgesi
+    @FindBy(xpath = "(//a[@class='btn px-1 text-danger fs-3 front-testimonial-delete-btn'])[1]")
+    public WebElement deleteTestimonialButton;
+
+    //AdminDashboard FrontCMS sekmesi ==> Testimonials bolumu Testimonials delete simgesi==>delete onay butonu
+    @FindBy(xpath = "//button[text()='Yes, Delete!']")
+    public WebElement deleteTestimonialOnay;
+
+    //AdminDashboard FrontCMS sekmesi ==> Testimonials bolumu Testimonials delete simgesi==>delete onay butonu==>success
+    @FindBy(xpath = "//div[@class='swal-icon--success__ring']")
+    public WebElement deleteTestimonialSuccess;
+
     //AdminDashboard FrontCMS sekmesi ==> Enquiries butonu
     @FindBy(xpath = "(//a[@class='nav-link p-0 '])[22]")
     public WebElement frontCmsSayfasiEnquiriesButton;
+
+    //AdminDashboard FrontCMS sekmesi ==> Enquiries butonu==> sorular tablosu
+    @FindBy(xpath = "//tbody")
+    public WebElement enquiriesQuestionTable;
 
     //**Eren Gok**
 
