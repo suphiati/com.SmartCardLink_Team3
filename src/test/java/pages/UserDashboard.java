@@ -240,5 +240,12 @@ public class UserDashboard {
     public WebElement signOutButonu;
     //*******Ramazan*********
 
+    //*******Murat*********
+
+    @FindBy(xpath="//a[text()='Profile Details']")
+    public WebElement profileDetailsBasligi;
+
+    //*******Murat*********
+
 }
 
