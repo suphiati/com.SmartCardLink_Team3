@@ -247,5 +247,28 @@ public class UserDashboard {
 
     //*******Murat*********
 
+    //***Eren***
+    @FindBy(xpath = "(//*[@class='nav-link d-flex align-items-center py-3'])[6]")
+    public WebElement affilationsButonu;
+
+    @FindBy(xpath = "(//*[@class='col-md-6 widget'])[1]")
+    public WebElement totalAffilationAmount;
+
+    @FindBy(xpath = "(//*[@class='col-md-6 widget'])[2]")
+    public WebElement currentAffilationAmount;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary sendInviteBtn']")
+    public WebElement affilationsSendInvite;
+
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement affilationsSendInviteEmailBox;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary sendmailbtn']")
+    public WebElement affilationsSendInviteSendMail;
+
+
+
+    //***Eren***
+
 }
 
