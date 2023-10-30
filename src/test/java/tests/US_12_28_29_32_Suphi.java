@@ -275,13 +275,166 @@ public class US_12_28_29_32_Suphi {
     public void US32CouponTesti(){
         Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
 
-        ReusableMethods.waitForPageToLoad(5);
-
         // Admin olarak sayfaya giriş
         adminDashboard.signIn.click();
         adminDashboard.AdminAdi.sendKeys("admin07@smartcardlink.com");
         adminDashboard.AdminSifre.sendKeys("123123123");
         adminDashboard.loginButonu.click();
-    }
 
+
+        //Coupon code basligi
+        adminDashboard.couponCode.click();
+        ReusableMethods.wait(1);
+        String expectedCouponCodeBasligi="Coupon Codes";
+        String actualCouponCodesBasligi= adminDashboard.couponCodeBasligi.getText();
+        Assert.assertTrue(actualCouponCodesBasligi.contains(expectedCouponCodeBasligi));
+
+
+        //Yeni kupon kodu ekleme
+        String expectedAddCouponCodeBasligi="Add Coupon Code";
+        String actualAddCouponCodeBasligi=adminDashboard.addCouponCodeButonu.getText();
+        Assert.assertTrue(actualAddCouponCodeBasligi.contains(expectedAddCouponCodeBasligi));
+
+        adminDashboard.addCouponCodeButonu.click();
+
+//** Fixed Type için
+        //Kupon adı
+        adminDashboard.enterCouponName.sendKeys("FIXED TYPE");
+
+        //Kupon cesidi
+        adminDashboard.couponTypeFixedButonu.click();
+
+        // İndirim miktari
+        adminDashboard.couponDiscount.sendKeys("10");
+
+        //son kullanma tarihi
+        adminDashboard.couponExpireDateSelect.click();
+        adminDashboard.expireNextMonth.click();
+        adminDashboard.couponExpireDay.click();
+
+        //Status
+        adminDashboard.addCouponStatus.click();
+
+        //Save
+        adminDashboard.saveCouponCode.click();
+
+
+        // -- eklenen kupon üzerinde kupon sayfasında yapılan değişiklikler
+
+        //Kupon adını basligi görüntüleme
+        ReusableMethods.wait(2);
+        String expectedCouponNameBasligi="COUPON NAME";
+        String actualCouponNameBasligi=adminDashboard.couponNameBasligi.getText();
+        Assert.assertEquals(actualCouponNameBasligi,expectedCouponNameBasligi);
+
+        //Kupon adını görüntüleme
+        String expectedKuponAdi=adminDashboard.enterCouponName.getText();
+        String actualKuponAdi=adminDashboard.girilenKuponAdi.getText();
+        Assert.assertTrue(actualKuponAdi.contains(expectedKuponAdi));
+
+        //Kupon çeşidi basligi görüntüleme
+        String expectedCouponTypeBasligi="COUPON TYPE";
+        String actualCouponTypeBasligi=adminDashboard.couponTypeBasligi.getText();
+        Assert.assertEquals(actualCouponTypeBasligi,expectedCouponTypeBasligi);
+
+        //Kupon cesidi
+        String expectedCouponType="Fixed";
+        String actualCouponType=adminDashboard.secilenCouponFixed.getText();
+        Assert.assertEquals(actualCouponType,expectedCouponType);
+
+        //kupon indirim görüntüleme
+        String expectedCouponDiscount=adminDashboard.couponDiscount.getText();
+        String actualCouponDiscount=adminDashboard.girilenDiscountMiktari.getText();
+        Assert.assertTrue(actualCouponDiscount.contains(expectedCouponDiscount));
+
+
+        //son kullanma tarihigörüntüleme
+
+        String expectedExpireBasligi="EXPIRE AT";
+        String actualExpireBasligi=adminDashboard.expireAtBasligi.getText();
+        Assert.assertTrue(actualExpireBasligi.contains(expectedExpireBasligi));
+
+        //girilen son kullanma tarihi
+        String expectedGirilenTarih= "6th Nov, 2023";
+        String actualGirlenTarih=adminDashboard.girilenExpireAtTarihi.getText();
+        Assert.assertTrue(actualGirlenTarih.contains(expectedGirilenTarih));
+
+        // status basligi
+        String expectedStatusBasligi="STATUS";
+        String actualStatusBasligi=adminDashboard.statusBasligi.getText();
+        Assert.assertTrue(actualStatusBasligi.contains(expectedStatusBasligi));
+
+        //status degisiklik basarili
+        String expectedStatusSuccessDogrulama="Success";
+        String actualStatusSuccessDogrulama=adminDashboard.statusDegisiklikSuccessBasligi.getText();
+        Assert.assertTrue(actualStatusSuccessDogrulama.contains(expectedStatusSuccessDogrulama));
+
+        //action basligi görüntüleme
+        String expectedActionBasligi="ACTION";
+        String actualActionBasligi=adminDashboard.actionBasligi.getText();
+        Assert.assertTrue(actualActionBasligi.contains(expectedActionBasligi));
+
+        //action edit kupon butonu
+        adminDashboard.actionCouponEdit.click();
+
+        ReusableMethods.wait(1);
+
+        //edit kupon kodu bölümü görüntüleme
+        String expectedEditCoupon="Edit Coupon Code";
+        String actualEditCoupon=adminDashboard.editCouponCodeBasligi.getText();
+        Assert.assertTrue(actualEditCoupon.matches(expectedEditCoupon));
+        ReusableMethods.wait(5);
+
+        //status degistir
+        adminDashboard.ediCouponStatus.click();
+
+        //değişiklik kaydet
+        adminDashboard.editCouponSaveButton.click();
+
+        //delete kupon butonu
+        ReusableMethods.wait(3);
+
+        adminDashboard.couponDelete.click();
+        ReusableMethods.wait(1);
+        adminDashboard.yesDeleteButonu.click();
+
+        ReusableMethods.wait(5);
+
+        adminDashboard.addCouponCodeButonu.click();
+
+//** Percentage Type için
+        //Kupon adı
+        adminDashboard.enterCouponName.sendKeys("PERCENTAGETYPE");
+
+        //Kupon cesidi
+        adminDashboard.couponTypePercentageButonu.click();
+
+        // İndirim miktari
+        adminDashboard.couponDiscount.click();
+        adminDashboard.couponDiscount.sendKeys("10");
+
+        //son kullanma tarihi
+        adminDashboard.couponExpireDateSelect.click();
+        adminDashboard.expireNextMonth.click();
+        adminDashboard.couponExpireDay.click();
+
+        ReusableMethods.wait(1);
+
+        //Status
+        adminDashboard.addCouponStatus.click();
+
+        //Save
+        adminDashboard.saveCouponCode.click();
+
+        ReusableMethods.wait(2);
+        adminDashboard.couponDelete.click();
+        adminDashboard.yesDeleteButonu.click();
+        ReusableMethods.wait(2);
+
+        Driver.closeDriver();
+
+
+
+    }
 }
+
