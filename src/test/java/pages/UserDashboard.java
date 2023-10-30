@@ -273,6 +273,18 @@ public class UserDashboard {
     @FindBy(xpath = "//a[text()='Withdraw Amount']")
     public WebElement affilationsWithdrawAmount;
 
+    @FindBy(xpath = "//*[@id='withdrawAmount']")
+    public WebElement enterAmount;
+
+    @FindBy(xpath = "//*[@id='paypalEmail']")
+    public WebElement paypalEmail;
+
+    @FindBy(xpath = "(//*[@class='btn btn-primary'])[3]")
+    public WebElement withdrawSave;
+
+    @FindBy(xpath = "//div[text()='Success']")
+    public WebElement withdrawSuccess;
+
 
     //***Eren***
 }
