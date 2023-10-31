@@ -122,7 +122,7 @@ public class US_14_30_31_33_ramazan extends InPage {
         adminDashboard.newStateButton.click();
 
         //Olusturmak istediginiz eyalet adini giriniz
-        adminDashboard.eyaletIsmiKutusu.sendKeys("atest");
+        adminDashboard.eyaletSehirIsmiKutusu.sendKeys("atest");
         //Eyaletin baglanacagi ulkeyi secin
         adminDashboard.eyaletinBaglanacagiUlkeKutusu.click();
         ReusableMethods.wait(1);
@@ -137,7 +137,7 @@ public class US_14_30_31_33_ramazan extends InPage {
                 adminDashboard.countryTableIlkKare.getText());
 
         //Sonraki testler icin eklenen eyaleti silin
-        adminDashboard.eyaletSilmeKutusu.click();
+        adminDashboard.eyaletSehirSilmeKutusu.click();
         adminDashboard.ilkSıradakiUlkeyiSilmeOnayButonu.click();
         ReusableMethods.wait(5);
 
@@ -165,6 +165,28 @@ public class US_14_30_31_33_ramazan extends InPage {
 
         //Cities bolumune gecin
         adminDashboard.citiesSayfasi.click();
+        //Toplam sehir sayisinin gorunur oldugunu test edin
+        Assert.assertTrue(adminDashboard.toplamSehirSonucYazisi.isDisplayed());
+
+        //New country butonuna basin ve eklemek istediginiz sehrin bilgilerini girin ve sehri ekleyin
+        adminDashboard.newCityButton.click();
+        adminDashboard.eyaletSehirIsmiKutusu.sendKeys(ConfigReader.getProperty("eklenmekIstenenSehirAdi"));
+
+        adminDashboard.sehrinBaglanacagiEyaletKutusu.click();
+        adminDashboard.getSehrinBaglanacagiEyaletiSecme.sendKeys("arizona"+Keys.ENTER);
+        adminDashboard.ulkeEklemeSaveButonu.click();
+        ReusableMethods.wait(3);
+
+        //Eklediginiz eyaletin basariyla eklendigini test edin
+        Assert.assertEquals(ConfigReader.getProperty("eklenmekIstenenSehirAdi"),
+                adminDashboard.countryTableIlkKare.getText());
+
+        //Sonraki testler icin eklenen sehri silin
+        adminDashboard.eyaletSehirSilmeKutusu.click();
+        ReusableMethods.wait(1);
+        adminDashboard.ilkSıradakiUlkeyiSilmeOnayButonu.click();
+
+
 
         ReusableMethods.wait(3);
     }
