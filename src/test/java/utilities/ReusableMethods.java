@@ -1,6 +1,7 @@
 package utilities;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
@@ -8,10 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.function.Function;
 
 public class ReusableMethods {
@@ -44,6 +42,15 @@ public class ReusableMethods {
             }
         }
         Driver.getDriver().switchTo().window(origin);
+    }
+    public static String getNewWindowHandle(){
+        //Yeni açılan sekmeye geçiş yapılır
+        Set<String> windowHandles = Driver.getDriver().getWindowHandles();
+        String newWindowHandle = null;
+        for (String handle : windowHandles) {
+            newWindowHandle = handle;
+        }
+        return newWindowHandle;
     }
 
     //========Hover Over=====//
