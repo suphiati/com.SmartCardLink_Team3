@@ -1,13 +1,14 @@
 package pages;
 
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class UserDashboard {
-
-
     public UserDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -247,5 +248,44 @@ public class UserDashboard {
 
     //*******Murat*********
 
+    //***Eren***
+    @FindBy(xpath = "(//*[@class='nav-link d-flex align-items-center py-3'])[6]")
+    public WebElement affilationsButonu;
+
+    @FindBy(xpath = "(//*[@class='col-md-6 widget'])[1]")
+    public WebElement totalAffilationAmount;
+
+    @FindBy(xpath = "(//*[@class='col-md-6 widget'])[2]")
+    public WebElement currentAffilationAmount;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary sendInviteBtn']")
+    public WebElement affilationsSendInvite;
+
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement affilationsSendInviteEmailBox;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary sendmailbtn']")
+    public WebElement affilationsSendInviteSendMail;
+
+    @FindBy(xpath = "//*[@id='withdrawal-tab']")
+    public WebElement affilationsWithdraw;
+
+    @FindBy(xpath = "//a[text()='Withdraw Amount']")
+    public WebElement affilationsWithdrawAmount;
+
+    @FindBy(xpath = "//*[@id='withdrawAmount']")
+    public WebElement enterAmount;
+
+    @FindBy(xpath = "//*[@id='paypalEmail']")
+    public WebElement paypalEmail;
+
+    @FindBy(xpath = "(//*[@class='btn btn-primary'])[3]")
+    public WebElement withdrawSave;
+
+    @FindBy(xpath = "//div[text()='Success']")
+    public WebElement withdrawSuccess;
+
+
+    //***Eren***
 }
 
