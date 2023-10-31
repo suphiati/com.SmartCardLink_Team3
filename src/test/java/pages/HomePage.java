@@ -31,6 +31,8 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='btn btn-primary']")
     public WebElement loginButonu;
 
+    // ********** HASAN ********** BEGIN ********** //
+
     @FindBy(xpath = "")
     public WebElement siteLogoX; // Ramazan hocam bu locate çakışma yapacak. Bunu silebilirsiniz.
 
@@ -59,9 +61,18 @@ public class HomePage {
     public WebElement footerPrivacyPolicyLink;
 
     @FindBy(xpath = "//a[text()='FAQ']") //hasan
-    public WebElement footFAQLink;
+    public WebElement footerFAQLink;
 
+    @FindBy(xpath = "//h1[text()='Terms & Conditions']") //hasan
+    public WebElement termsAndConditionsText;
 
+    @FindBy(xpath = "//h1[text()='Privacy Policy']") //hasan
+    public WebElement privacyPolicyText;
+
+    @FindBy(xpath = "//h1[text()='Frequently Asked Questions (FAQ)']") //hasan
+    public WebElement fQAText;
+
+    // ********** HASAN ********** END ********** //
 
 
 }
