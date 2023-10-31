@@ -5,7 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class gitHomePage {
+
+public class HomePage {
     public HomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
 
@@ -227,10 +228,9 @@ public class gitHomePage {
     public WebElement homePageSubscribeHereBolumu;
 
 
-
-
-
     // =============================HOME PAGE BODY ELEMENTLERİ -SON =================================
 
 
 }
+
+
