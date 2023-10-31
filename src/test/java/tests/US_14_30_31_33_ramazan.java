@@ -3,6 +3,7 @@ package tests;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.devtools.v85.network.model.DataReceived;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
@@ -22,51 +23,63 @@ public class US_14_30_31_33_ramazan extends InPage {
     public void uS14(){
 
     initialize();
-
+    //Siteye gidin
     Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
 
+    //Sign in butonuna basin
     homePage.signInButton.click();
 
+    //Geçerli kullanici bilgilerini girip basarili bir sekilde giris yapin
     homePage.emailKutusu.sendKeys(ConfigReader.getProperty("ramazanEmail"));
     homePage.passwordKutusu.sendKeys(ConfigReader.getProperty("ramazanCurrentPassword"));
     homePage.loginButonu.click();
-    ReusableMethods.wait(3);
+    ReusableMethods.wait(2);
+
+    //Sağ ustteki kullanici adinin oldugu bolmeye tiklayarak asagi acilir menuyu acin
     userDashboard.kullaniCikisBolumu.click();
     ReusableMethods.wait(1);
+
+    //Change Password sayfasina tiklayin
     userDashboard.changePasswordButonu.click();
     ReusableMethods.wait(1);
+
+    //Istenen bilgileri doldurarak sifreyi degistirin
    userDashboard.currentPasswordKutusu.sendKeys(ConfigReader.getProperty("ramazanCurrentPassword"));
    userDashboard.newPasswordKutusu.sendKeys(ConfigReader.getProperty("ramazanNewPassword"));
    userDashboard.confirmPasswordKutusu.sendKeys(ConfigReader.getProperty("ramazanNewPassword"));
    userDashboard.changePasswordSaveButonu.click();
    ReusableMethods.wait(1);
 
+   //Sifrenin basarili bir sekilde degistigini test edin
     Assert.assertTrue(userDashboard.passwordSuccesfullyChangedYaziElementi.isDisplayed());
 
     ReusableMethods.wait(5);
 
 
-    //Dili degistirmek icin
+    //Dili degistirmek icin yine asagi acilir menuyu acın ve Change Language butonuna basin
 
     userDashboard.kullaniCikisBolumu.click();
     ReusableMethods.wait(1);
     userDashboard.changeLanguageButonu.click();
+
+    //Acilan sayfada istenen kutulari doldurun ve yeni dili kaydedin
     userDashboard.languageSwitchButton.click();
     userDashboard.dilSeçmeMetinKutusu.sendKeys("English"+ Keys.ENTER);
     userDashboard.changeLanguageSaveButonu.click();
 
+    //Kullanilan dilin basarili bir sekilde degistini test edin
     Assert.assertTrue(userDashboard.passwordSuccesfullyChangedYaziElementi.isDisplayed());
     ReusableMethods.wait(3);
 
+    //Cikis yapmak icin asagi acilir menuden Sign Out butonuna basin
     userDashboard.kullaniCikisBolumu.click();
     userDashboard.signOutButonu.click();
     ReusableMethods.wait(1);
 
+    //Basarili bir sekilde cikis yaptiginizi test edin
     Assert.assertTrue(homePage.emailKutusu.isDisplayed());
 
 
-
-    Driver.closeDriver();
     }
 
     @Test
@@ -141,28 +154,6 @@ public class US_14_30_31_33_ramazan extends InPage {
         adminDashboard.ilkSıradakiUlkeyiSilmeOnayButonu.click();
         ReusableMethods.wait(5);
 
-
-    }
-
-
-
-
-
-
-
-    @Test
-    public void us30CitiesBolumu(){
-    initialize();
-
-        Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
-        homePage.signInButton.click();
-
-        //Geçerli admin bilgilerini girip basarili bir sekilde giris yapin
-        homePage.emailKutusu.sendKeys(ConfigReader.getProperty("admin_username2"));
-        homePage.passwordKutusu.sendKeys(ConfigReader.getProperty("admin_password1"));
-        homePage.loginButonu.click();
-        adminDashboard.countriesButton.click();
-
         //Cities bolumune gecin
         adminDashboard.citiesSayfasi.click();
         //Toplam sehir sayisinin gorunur oldugunu test edin
@@ -187,8 +178,71 @@ public class US_14_30_31_33_ramazan extends InPage {
         adminDashboard.ilkSıradakiUlkeyiSilmeOnayButonu.click();
 
 
+    }
+
+
+    @Test
+    public void us31(){
+        initialize();
+
+        //Siteye gidin
+        Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
+
+        //Sign in butonuna basin
+        homePage.signInButton.click();
+
+        //Geçerli admin bilgilerini girip basarili bir sekilde giris yapin
+        homePage.emailKutusu.sendKeys(ConfigReader.getProperty("admin_username2"));
+        homePage.passwordKutusu.sendKeys(ConfigReader.getProperty("admin_password1"));
+        homePage.loginButonu.click();
+
+        //Languages sayfasina gidin
+        adminDashboard.languagesButton.click();
+
+        //Sitede kullanilan toplam dil sayisinin goruntulenebildigini test edin
+        Assert.assertTrue(adminDashboard.toplamLanguageSayisiSonuc.isDisplayed());
 
         ReusableMethods.wait(3);
+
+    }
+
+
+    @Test
+    public void uS33(){
+    initialize();
+        //Siteye gidin
+        Driver.getDriver().get(ConfigReader.getProperty("smartCardLinkUrl"));
+
+        //Sign in butonuna basin
+        homePage.signInButton.click();
+
+        //Geçerli admin bilgilerini girip basarili bir sekilde giris yapin
+        homePage.emailKutusu.sendKeys(ConfigReader.getProperty("admin_username2"));
+        homePage.passwordKutusu.sendKeys(ConfigReader.getProperty("admin_password1"));
+        homePage.loginButonu.click();
+
+        //Front CMS sayfasina gidin
+        adminDashboard.frontCMSButton.click();
+
+        //Title yazisinin gorunur oldugunu test edin
+        Assert.assertTrue(adminDashboard.frontCMSTitleYazisi.isDisplayed());
+
+        //Sub-Text yazisinin gorunur oldugunu test edin
+        Assert.assertTrue(adminDashboard.frontCMSSubTextYazisi.isDisplayed());
+
+        //Features bolumune tiklayip yazilarin gorunur oldugunu test edin
+        adminDashboard.featuresLinki.click();
+        ReusableMethods.wait(1);
+        Assert.assertTrue(adminDashboard.featuresTableYazi.isDisplayed());
+
+        //About Us bolumune tiklayip yazilarin gorunur oldugunu test edin
+        adminDashboard.aboutUsLinki.click();
+        ReusableMethods.wait(1);
+        Assert.assertTrue(adminDashboard.aboutUsGorunurYazi.isDisplayed());
+
+        ReusableMethods.wait(3);
+
+
     }
 
 
