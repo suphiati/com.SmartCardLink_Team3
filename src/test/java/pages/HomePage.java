@@ -31,6 +31,7 @@ public class HomePage {
     //SignIn loginButonu
     @FindBy(xpath = "//*[@class='btn btn-primary']")
     public WebElement loginButonu;
+  
 
     @FindBy(xpath = "(//a[@aria-current='page'])[2]")
     public WebElement vcard;
@@ -117,9 +118,9 @@ public class HomePage {
     // Vcard basariyla olusturuldu mesaji
     @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[2]/div/div/div[2]/div")
     public WebElement vcardCreatedSuccessfullyYazisi;
+  
 
-    @FindBy(xpath = "")
-    public WebElement siteLogoX; // Ramazan hocam bu locate çakışma yapacak. Bunu silebilirsiniz.
+  // ********** HASAN ********** BEGIN ********** //   
 
     @FindBy(xpath = "//span[text()='Smart Card Link']") //hasan
     public WebElement footerSmartCardLinkText;
@@ -146,7 +147,18 @@ public class HomePage {
     public WebElement footerPrivacyPolicyLink;
 
     @FindBy(xpath = "//a[text()='FAQ']") //hasan
-    public WebElement footFAQLink;
+    public WebElement footerFAQLink;
+
+    @FindBy(xpath = "//h1[text()='Terms & Conditions']") //hasan
+    public WebElement termsAndConditionsText;
+
+    @FindBy(xpath = "//h1[text()='Privacy Policy']") //hasan
+    public WebElement privacyPolicyText;
+
+    @FindBy(xpath = "//h1[text()='Frequently Asked Questions (FAQ)']") //hasan
+    public WebElement fQAText;
+
+    // ********** HASAN ********** END ********** //
 
     // =============================HOME PAGE BODY ELEMENTLERİ =================================
     //        ============================== Smart Card Bolumu ==============================
