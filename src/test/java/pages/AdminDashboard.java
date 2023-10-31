@@ -451,7 +451,7 @@ public class AdminDashboard {
     @FindBy(xpath = "//*[@*='Short Code']")
     public WebElement shortCodeKutusu;
 
-    //Ulke ekleme save butonu
+    //Ulke eyalet sehir ekleme save butonu
     @FindBy(xpath = "//*[@*='btnSave']")
     public WebElement ulkeEklemeSaveButonu;
 
@@ -479,9 +479,9 @@ public class AdminDashboard {
     @FindBy(xpath = "//*[@*='btn btn-primary ms-auto']")
     public WebElement newStateButton;
 
-    //Eyalet ismi kutusu
+    //Eyalet ve sehir ismi kutusu
     @FindBy(xpath = "(//*[@name='name'])[1]")
-    public WebElement eyaletIsmiKutusu;
+    public WebElement eyaletSehirIsmiKutusu;
 
     //Eyalet sayfasında oluşturulmak istenen eyaletin baglanacagi ulke
     @FindBy (xpath = "//*[@*='select2-countryState-container']")
@@ -492,11 +492,27 @@ public class AdminDashboard {
 
     //Ilk siradaki eyaleti silme kutusu
     @FindBy(xpath = "(//*[@*='svg-inline--fa fa-trash'])[1]")
-    public WebElement eyaletSilmeKutusu;
+    public WebElement eyaletSehirSilmeKutusu;
 
     //Countries sayfasında Cities bolumune tiklama
     @FindBy(linkText = "Cities")
     public WebElement citiesSayfasi;
+
+    //Toplam sehir sayisi sonuc yazisi
+    @FindBy(xpath = "//*[@*='text-muted ms-sm-3 pagination-record']")
+    public WebElement toplamSehirSonucYazisi;
+
+    //New City butonu
+    @FindBy(xpath = "//*[@*='newCityBtn']")
+    public WebElement newCityButton;
+
+    //Sehrin baglanacagi eyalet
+    @FindBy(xpath = "(//*[@*='select2-StateCity-container'])[1]")
+    public WebElement sehrinBaglanacagiEyaletKutusu;
+
+    //Sehrin baglanacagi eyaleti secme
+    @FindBy(xpath = "//*[@*='searchbox']")
+    public WebElement getSehrinBaglanacagiEyaletiSecme;
 
     //*RAMAZAN*//
 
