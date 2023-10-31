@@ -514,6 +514,42 @@ public class AdminDashboard {
     @FindBy(xpath = "//*[@*='searchbox']")
     public WebElement getSehrinBaglanacagiEyaletiSecme;
 
+    //Languages butonu
+    @FindBy(xpath = "(//*[@*='nav-link d-flex align-items-center py-3'])[14]")
+    public WebElement languagesButton;
+
+    //Toplam dil sonuc yazisi
+    @FindBy(xpath = "//*[@*='col-12 text-muted pagination-record ms-sm-3']")
+    public WebElement toplamLanguageSayisiSonuc;
+
+    //Front CMS butonu
+    @FindBy(xpath = "(//*[@*='nav-link d-flex align-items-center py-3'])[16]")
+    public WebElement frontCMSButton;
+
+    //Front CMS Title yazisi
+    @FindBy(xpath = "//*[@*='Title']")
+    public WebElement frontCMSTitleYazisi;
+
+    //Front CMS Sub-Text yazisi
+    @FindBy(xpath = "//*[@*='Sub Text']")
+    public WebElement frontCMSSubTextYazisi;
+
+    //Features Linki
+    @FindBy(linkText = "Features")
+    public WebElement featuresLinki;
+
+    //Features gorunur yazilar
+    @FindBy(xpath = "//tr[1]/td[3]")
+    public WebElement featuresTableYazi;
+
+    //About Us linki
+    @FindBy(linkText = "About Us")
+    public WebElement aboutUsLinki;
+
+    //About us gorunur yazilar
+    @FindBy(xpath = "//*[@*='Description']")
+    public WebElement aboutUsGorunurYazi;
+
     //*RAMAZAN*//
 
 }
