@@ -94,6 +94,9 @@ public class AdminDashboard {
     @FindBy(xpath = "(//*[@id='profileImageIcon'])[1]")
     public WebElement addTestimonialAddImage;
 
+    @FindBy(xpath = "//*[@id='testimonialSave']")
+    public WebElement testimonialSave;
+
     //AdminDashboard FrontCMS sekmesi ==> Testimonials bolumu Add Testimonials sonrasi ==>Succes yazisi
     @FindBy(xpath = "//div[text()='Success']")
     public WebElement addTestimonialSuccessElementi;
