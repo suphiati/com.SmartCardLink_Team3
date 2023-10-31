@@ -429,4 +429,75 @@ public class AdminDashboard {
 
     //* MURAT *//
 
+    //*RAMAZAN*//
+
+    //Countries butonu
+    @FindBy(xpath = "(//*[@*='nav-link d-flex align-items-center py-3'])[13]")
+    public WebElement countriesButton;
+
+    //Toplam ulke sayisi yazisi
+    @FindBy(xpath = "//*[@*='text-muted ms-sm-3 pagination-record']")
+    public WebElement toplamCountriesYazisi;
+
+    //New Country butonu
+    @FindBy(xpath = "//*[@*='btn btn-primary ms-auto']")
+    public WebElement newCountryButton;
+
+    //Ulke ekleme ulke isim kutusu
+    @FindBy(xpath = "//*[@*='Name']")
+    public WebElement ulkeIsimKutusu;
+
+    //Ulke ekleme short code kutusu
+    @FindBy(xpath = "//*[@*='Short Code']")
+    public WebElement shortCodeKutusu;
+
+    //Ulke ekleme save butonu
+    @FindBy(xpath = "//*[@*='btnSave']")
+    public WebElement ulkeEklemeSaveButonu;
+
+    //Tablo ilk sutun karesi
+    @FindBy(xpath = "//tr[1]/td[1]")
+    public WebElement countryTableIlkKare;
+
+    //Ilk sıradaki ulkeyi silme butonu
+    @FindBy(xpath = "(//*[@*='Delete'])[1]")
+    public WebElement ilkSıradakiUlkeyiSilmeButonu;
+
+    //Ilk sıradaki ulkeyi silme onay butonu
+    @FindBy(xpath = "//*[@*='swal-button swal-button--confirm']")
+    public WebElement ilkSıradakiUlkeyiSilmeOnayButonu;
+
+    //Countries sayfasında states bolumune tiklama
+    @FindBy(linkText = "States")
+    public WebElement statesSayfasi;
+
+    //Eyalet sayfasi toplam eyalet sonucu yazisi
+    @FindBy(xpath = "//*[@*='text-muted ms-sm-3 pagination-record']")
+    public WebElement toplamEyaletSonucYazisi;
+
+    //New State butonu
+    @FindBy(xpath = "//*[@*='btn btn-primary ms-auto']")
+    public WebElement newStateButton;
+
+    //Eyalet ismi kutusu
+    @FindBy(xpath = "(//*[@name='name'])[1]")
+    public WebElement eyaletIsmiKutusu;
+
+    //Eyalet sayfasında oluşturulmak istenen eyaletin baglanacagi ulke
+    @FindBy (xpath = "//*[@*='select2-countryState-container']")
+    public WebElement eyaletinBaglanacagiUlkeKutusu;
+
+    @FindBy(xpath = "//*[@*='select2-search__field']")
+    public WebElement getEyaletinBaglanacagiUlkeninYazilacagiKutu;
+
+    //Ilk siradaki eyaleti silme kutusu
+    @FindBy(xpath = "(//*[@*='svg-inline--fa fa-trash'])[1]")
+    public WebElement eyaletSilmeKutusu;
+
+    //Countries sayfasında Cities bolumune tiklama
+    @FindBy(linkText = "Cities")
+    public WebElement citiesSayfasi;
+
+    //*RAMAZAN*//
+
 }
