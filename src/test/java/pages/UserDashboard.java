@@ -3,18 +3,12 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-public class UserDashboard {
-
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class UserDashboard {
-
-
     public UserDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -273,10 +267,25 @@ public class UserDashboard {
     @FindBy(xpath = "//*[@class='btn btn-primary sendmailbtn']")
     public WebElement affilationsSendInviteSendMail;
 
+    @FindBy(xpath = "//*[@id='withdrawal-tab']")
+    public WebElement affilationsWithdraw;
+
+    @FindBy(xpath = "//a[text()='Withdraw Amount']")
+    public WebElement affilationsWithdrawAmount;
+
+    @FindBy(xpath = "//*[@id='withdrawAmount']")
+    public WebElement enterAmount;
+
+    @FindBy(xpath = "//*[@id='paypalEmail']")
+    public WebElement paypalEmail;
+
+    @FindBy(xpath = "(//*[@class='btn btn-primary'])[3]")
+    public WebElement withdrawSave;
+
+    @FindBy(xpath = "//div[text()='Success']")
+    public WebElement withdrawSuccess;
 
 
     //***Eren***
-
-}
 }
 
