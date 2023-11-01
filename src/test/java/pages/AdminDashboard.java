@@ -94,6 +94,9 @@ public class AdminDashboard {
     @FindBy(xpath = "(//*[@id='profileImageIcon'])[1]")
     public WebElement addTestimonialAddImage;
 
+    @FindBy(xpath = "//*[@id='testimonialSave']")
+    public WebElement testimonialSave;
+
     //AdminDashboard FrontCMS sekmesi ==> Testimonials bolumu Add Testimonials sonrasi ==>Succes yazisi
     @FindBy(xpath = "//div[text()='Success']")
     public WebElement addTestimonialSuccessElementi;
@@ -439,5 +442,128 @@ public class AdminDashboard {
     public WebElement activeUsersCountElement;
 
     //* MURAT *//
+
+    //*RAMAZAN*//
+
+    //Countries butonu
+    @FindBy(xpath = "(//*[@*='nav-link d-flex align-items-center py-3'])[13]")
+    public WebElement countriesButton;
+
+    //Toplam ulke sayisi yazisi
+    @FindBy(xpath = "//*[@*='text-muted ms-sm-3 pagination-record']")
+    public WebElement toplamCountriesYazisi;
+
+    //New Country butonu
+    @FindBy(xpath = "//*[@*='btn btn-primary ms-auto']")
+    public WebElement newCountryButton;
+
+    //Ulke ekleme ulke isim kutusu
+    @FindBy(xpath = "//*[@*='Name']")
+    public WebElement ulkeIsimKutusu;
+
+    //Ulke ekleme short code kutusu
+    @FindBy(xpath = "//*[@*='Short Code']")
+    public WebElement shortCodeKutusu;
+
+    //Ulke eyalet sehir ekleme save butonu
+    @FindBy(xpath = "//*[@*='btnSave']")
+    public WebElement ulkeEklemeSaveButonu;
+
+    //Tablo ilk sutun karesi
+    @FindBy(xpath = "//tr[1]/td[1]")
+    public WebElement countryTableIlkKare;
+
+    //Ilk sıradaki ulkeyi silme butonu
+    @FindBy(xpath = "(//*[@*='Delete'])[1]")
+    public WebElement ilkSıradakiUlkeyiSilmeButonu;
+
+    //Ilk sıradaki ulkeyi silme onay butonu
+    @FindBy(xpath = "//*[@*='swal-button swal-button--confirm']")
+    public WebElement ilkSıradakiUlkeyiSilmeOnayButonu;
+
+    //Countries sayfasında states bolumune tiklama
+    @FindBy(linkText = "States")
+    public WebElement statesSayfasi;
+
+    //Eyalet sayfasi toplam eyalet sonucu yazisi
+    @FindBy(xpath = "//*[@*='text-muted ms-sm-3 pagination-record']")
+    public WebElement toplamEyaletSonucYazisi;
+
+    //New State butonu
+    @FindBy(xpath = "//*[@*='btn btn-primary ms-auto']")
+    public WebElement newStateButton;
+
+    //Eyalet ve sehir ismi kutusu
+    @FindBy(xpath = "(//*[@name='name'])[1]")
+    public WebElement eyaletSehirIsmiKutusu;
+
+    //Eyalet sayfasında oluşturulmak istenen eyaletin baglanacagi ulke
+    @FindBy (xpath = "//*[@*='select2-countryState-container']")
+    public WebElement eyaletinBaglanacagiUlkeKutusu;
+
+    @FindBy(xpath = "//*[@*='select2-search__field']")
+    public WebElement getEyaletinBaglanacagiUlkeninYazilacagiKutu;
+
+    //Ilk siradaki eyaleti silme kutusu
+    @FindBy(xpath = "(//*[@*='svg-inline--fa fa-trash'])[1]")
+    public WebElement eyaletSehirSilmeKutusu;
+
+    //Countries sayfasında Cities bolumune tiklama
+    @FindBy(linkText = "Cities")
+    public WebElement citiesSayfasi;
+
+    //Toplam sehir sayisi sonuc yazisi
+    @FindBy(xpath = "//*[@*='text-muted ms-sm-3 pagination-record']")
+    public WebElement toplamSehirSonucYazisi;
+
+    //New City butonu
+    @FindBy(xpath = "//*[@*='newCityBtn']")
+    public WebElement newCityButton;
+
+    //Sehrin baglanacagi eyalet
+    @FindBy(xpath = "(//*[@*='select2-StateCity-container'])[1]")
+    public WebElement sehrinBaglanacagiEyaletKutusu;
+
+    //Sehrin baglanacagi eyaleti secme
+    @FindBy(xpath = "//*[@*='searchbox']")
+    public WebElement getSehrinBaglanacagiEyaletiSecme;
+
+    //Languages butonu
+    @FindBy(xpath = "(//*[@*='nav-link d-flex align-items-center py-3'])[14]")
+    public WebElement languagesButton;
+
+    //Toplam dil sonuc yazisi
+    @FindBy(xpath = "//*[@*='col-12 text-muted pagination-record ms-sm-3']")
+    public WebElement toplamLanguageSayisiSonuc;
+
+    //Front CMS butonu
+    @FindBy(xpath = "(//*[@*='nav-link d-flex align-items-center py-3'])[16]")
+    public WebElement frontCMSButton;
+
+    //Front CMS Title yazisi
+    @FindBy(xpath = "//*[@*='Title']")
+    public WebElement frontCMSTitleYazisi;
+
+    //Front CMS Sub-Text yazisi
+    @FindBy(xpath = "//*[@*='Sub Text']")
+    public WebElement frontCMSSubTextYazisi;
+
+    //Features Linki
+    @FindBy(linkText = "Features")
+    public WebElement featuresLinki;
+
+    //Features gorunur yazilar
+    @FindBy(xpath = "//tr[1]/td[3]")
+    public WebElement featuresTableYazi;
+
+    //About Us linki
+    @FindBy(linkText = "About Us")
+    public WebElement aboutUsLinki;
+
+    //About us gorunur yazilar
+    @FindBy(xpath = "//*[@*='Description']")
+    public WebElement aboutUsGorunurYazi;
+
+    //*RAMAZAN*//
 
 }
