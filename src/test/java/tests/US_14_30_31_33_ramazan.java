@@ -178,7 +178,6 @@ public class US_14_30_31_33_ramazan extends InPage {
         ReusableMethods.wait(1);
         adminDashboard.ilkSıradakiUlkeyiSilmeOnayButonu.click();
 
-
     }
 
 
@@ -206,7 +205,6 @@ public class US_14_30_31_33_ramazan extends InPage {
         ReusableMethods.wait(3);
 
     }
-
 
     @Test
     public void uS33(){
