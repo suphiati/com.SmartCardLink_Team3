@@ -3,10 +3,11 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+
+
 
 public class UserDashboard {
     public UserDashboard(){
@@ -136,8 +137,8 @@ public class UserDashboard {
     public WebElement currencyYazisi;
 
     //Select Currency Box
-    @FindBy(xpath = "//span[@title='Select Currency']")
-    public WebElement selectCurrency;
+    @FindBy(xpath = "//span[@role='combobox']")
+    public WebElement selectCurrencyBox;
 
     @FindBy(xpath = "//input[@role='searchbox']")
     public WebElement currencyBox;
@@ -203,42 +204,6 @@ public class UserDashboard {
 
     @FindBy(xpath = "//a[@class='dropdown-item text-gray-900 d-flex']")
     public WebElement signOut;
-
-    //***** SUPHİ *****//
-
-    //*******Ramazan*********
-    @FindBy(xpath = "//*[@*='changePassword']")
-    public WebElement changePasswordButonu;
-
-    @FindBy(xpath = "//*[@*='Current Password']")
-    public WebElement currentPasswordKutusu;
-
-    @FindBy(xpath = "//*[@*='New Password']")
-    public WebElement newPasswordKutusu;
-
-    @FindBy(xpath = "//*[@*='Confirm Password']")
-    public WebElement confirmPasswordKutusu;
-
-    @FindBy(xpath = "//*[@*='passwordChangeBtn']")
-    public WebElement changePasswordSaveButonu;
-
-    @FindBy(xpath = "//*[@*='toast-message']")
-    public WebElement passwordSuccesfullyChangedYaziElementi;
-
-    @FindBy(xpath = "//*[@*='changeLanguage']")
-    public WebElement changeLanguageButonu;
-
-    @FindBy(xpath = "//*[@id='select2-selectLanguage-container']")
-    public WebElement languageSwitchButton;
-
-    @FindBy(xpath = "(//*[@*='select2-selectLanguage-results'])[2]")
-    public WebElement dilSeçmeMetinKutusu;
-
-    @FindBy(xpath = "//*[@*='languageChangeBtn']")
-    public WebElement changeLanguageSaveButonu;
-
-    @FindBy(xpath = "/html/body/div[1]/div/div[3]/div[1]/header/ul/li[2]/div/div[2]/ul/li[5]/a/span[2]")
-    public WebElement signOutButonu;
     //*******Ramazan*********
 
     //*******Murat*********
@@ -288,4 +253,5 @@ public class UserDashboard {
 
     //***Eren***
 }
+
 

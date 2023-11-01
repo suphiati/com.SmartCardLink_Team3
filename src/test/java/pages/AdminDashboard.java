@@ -153,8 +153,12 @@ public class AdminDashboard {
     @FindBy(xpath = "(//div[@class='d-flex align-items-center']//span['User'])[1]")
     public WebElement userBasligi;
 
+    //Kullanici sıralama
+    @FindBy(xpath = "//span/*[@stroke='currentColor']")
+    public WebElement kullaniciSirala;
+
     //kullanici bilgisi
-    @FindBy(xpath = "(//div[@class='d-flex align-items-center']//span['User'])[7]")
+    @FindBy(xpath = "(//div[@class='d-flex align-items-center']//span['User'])[3]")
     public WebElement odemeYapilacakKisiAdi;
 
 
@@ -163,7 +167,7 @@ public class AdminDashboard {
     public WebElement amountBasligi;
 
     //odeme turari
-    @FindBy(xpath = "(//span[@class='badge bg-success me-2'])[5]")
+    @FindBy(xpath = "(//span[@class='badge bg-success me-2'])[1]")
     public WebElement odemeTutari;
 
     //Ödeme Tipi basligi
@@ -171,7 +175,7 @@ public class AdminDashboard {
     public WebElement paymentTypeBasligi;
 
     //odeme tipi
-    @FindBy(xpath = "(//span[@class='badge bg-primary me-2'])[5]")
+    @FindBy(xpath = "(//span[@class='badge bg-primary me-2'])[1]")
     public WebElement odemeTipi;
 
     //Date basligi
@@ -179,7 +183,7 @@ public class AdminDashboard {
     public WebElement dateBasligi;
 
     //odeme tarihi
-    @FindBy(xpath = "(//span[@class='badge bg-secondary me-2'])[5]")
+    @FindBy(xpath = "(//span[@class='badge bg-secondary me-2'])[1]")
     public WebElement odemeTarihi;
 
 //********************************//
@@ -258,7 +262,7 @@ public class AdminDashboard {
     public WebElement couponExpireYear;
 
     //bitiş günü seçimi
-    @FindBy(xpath ="//span[@aria-label='November 6, 2023']")
+    @FindBy(xpath ="//span[@aria-label='November 30, 2023']")
     public WebElement couponExpireDay;
 
     //Next month
@@ -351,6 +355,13 @@ public class AdminDashboard {
     // Kupon silme evet
     @FindBy(xpath = "//button[@class='swal-button swal-button--confirm']")
     public WebElement yesDeleteButonu;
+
+    //Kupon silindi doğrulama
+    @FindBy(xpath = "//div[@class='swal-text']/text()")
+    public WebElement kuponSilindiDogrulama;
+
+    @FindBy(xpath = "//div[@class='swal-text' and text()='Coupon Code has been deleted.']")
+    public WebElement kuponSilindiBasligi;
 
 
     //Sign out bolümü
