@@ -1,5 +1,8 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -242,7 +245,8 @@ public class US_12_28_29_32_Suphi {
 
     }
 
-
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Para Birimi")
     @Test
     public void US29_ParaBirimleri() {
 
